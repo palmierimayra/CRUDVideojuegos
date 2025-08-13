@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Videojuegos.Models.Videojuego>
+
+<h1>Base de Videojuegos</h1>
+
+<p>
+    <button type="button" onclick="window.location.href='@Url.Action("Create")'" class="btn btn-primary">
+        Crear nuevo
+    </button>
+</p>
+
+<table class="table table-transparent">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Desarrollador</th>
+            <th>Género</th>
+            <th>Año</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NameVG</td>
+                <td>@item.Developer</td>
+                <td>@item.Genre</td>
+                <td>@item.Release</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,57 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+body {
+    margin-bottom: 0;
+    background-image: url("https://wallpapers.com/images/hd/indie-games-3000-x-2000-wallpaper-hfzt4kn4xxcjfzo3.jpg");
+    height: 100vh;
+
+}
+
+.table-transparent {
+    background-color: transparent !important;
+    border: solid 2px black !important;
+}
+
+    .table-transparent thead,
+    .table-transparent thead tr,
+    .table-transparent thead th {
+        background-color: transparent !important;
+        border: solid 1px black !important;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table-transparent tbody tr,
+    .table-transparent tbody td {
+        background-color: transparent !important;
+        border: solid 1px black !important;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top:30px;
+    }
+
+    .navbar-brand{
+        font-size: 14px;
+        font-weight: bolder;
+    }
+
+    p{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:20px;
+    }

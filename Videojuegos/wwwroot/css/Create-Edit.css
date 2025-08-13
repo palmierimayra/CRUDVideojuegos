@@ -1,0 +1,38 @@
+﻿#description {
+    height: 100px;
+}
+
+label {
+    text-align: end;
+    vertical-align: middle;
+    width: 150px;
+    padding-bottom: 5px;
+    font-weight: bolder;
+}
+
+select, input {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid 1px black;
+    margin: 5px;
+    text-align: center;
+}
+
+btn-primary {
+    align-items: center;
+}
+
+.btn-secondary, .btn-danger {
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+.btn-success {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+p {
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+﻿@model Videojuegos.Models.Videojuego
+@section Styles {
+    <link rel="stylesheet" href="~/css/Create-Edit.css" />
+}
+
+<h1>Editar Videojuego</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div id="details">
+        <label>Nombre</label>
+        <input asp-for="NameVG" />
+    </div>
+    <div>
+        <label>Desarrollador</label>
+        <input asp-for="Developer" />
+    </div>
+    <div>
+        <label>Género</label>
+        <select asp-for="Genre" asp-items="ViewBag.Generos">
+            <option value="">Seleccionar</option>
+        </select>
+    </div>
+    <div>
+        <label>Año de Lanzamiento</label>
+        <input asp-for="Release" type="date"/>
+    </div>
+    <div>
+        <label >Descripción</label>
+        <input id="description" asp-for="Description" />
+    </div>
+    <button type="button" onclick="window.location.href='@Url.Action("Index", "Videojuegos")'" class="btn btn-secondary">Volver</button>
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>

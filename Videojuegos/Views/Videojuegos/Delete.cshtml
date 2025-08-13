@@ -1,0 +1,15 @@
+﻿@model Videojuegos.Models.Videojuego
+@section Styles {
+    <link rel="stylesheet" href="~/css/Delete.css" />
+}
+
+<h1>Eliminar Videojuego</h1>
+
+<p>¿Estás seguro de eliminar <strong>@Model.NameVG</strong>?</p>
+
+<form id="delete" asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

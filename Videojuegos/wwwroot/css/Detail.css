@@ -1,0 +1,17 @@
+﻿p{
+    text-align:center;
+    font-size:18px;
+}
+
+h1{
+    margin-bottom:20px;
+
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    display: inline-block;
+}

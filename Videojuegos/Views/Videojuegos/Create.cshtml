@@ -1,0 +1,49 @@
+﻿@model Videojuegos.Models.Videojuego
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Create-Edit.css" />
+}
+
+<h1>Crear Videojuego</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Nombre</label>
+        <input asp-for="NameVG" />
+        <span asp-validation-for="NameVG" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Desarrollador</label>
+        <input asp-for="Developer" />
+        <span asp-validation-for="Developer" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Género</label>
+        <select asp-for="Genre" asp-items="ViewBag.Generos">
+            <option value="">Seleccionar</option>
+        </select>
+        <span asp-validation-for="Genre" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Año de Lanzamiento</label>
+        <input asp-for="Release" type="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="Release" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label>Descripción</label>
+        <input id="description" asp-for="Description" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <button type="button" onclick="window.location.href='@Url.Action("Index", "Videojuegos")'" class="btn btn-secondary">Volver</button>
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+@section Scripts {
+    <!-- Scripts para validación cliente -->
+    <partial name="_ValidationScriptsPartial" />
+}
