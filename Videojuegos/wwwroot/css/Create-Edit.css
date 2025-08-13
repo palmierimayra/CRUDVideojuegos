@@ -1,6 +1,15 @@
 ﻿#description {
+    width: 200px;
     height: 100px;
+    border-radius: 10px;
+    border: solid 1px black;
+    margin: 5px;
+    text-align: center;
+    white-space: pre-wrap;
+    overflow-y: scroll;
+
 }
+
 
 label {
     text-align: end;
