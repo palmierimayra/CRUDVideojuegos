@@ -33,11 +33,11 @@
         <span asp-validation-for="Release" class="text-danger"></span>
     </div>
 
-<div>
-    <label>Descripción</label>
-    <textarea id="description" asp-for="Description"></textarea>
-    <span asp-validation-for="Description" class="text-danger"></span>
-</div>
+    <div>
+        <label>Descripción</label>
+        <textarea id="description" asp-for="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
 
 
     <button type="button" onclick="window.location.href='@Url.Action("Index", "Videojuegos")'" class="btn btn-secondary">Volver</button>

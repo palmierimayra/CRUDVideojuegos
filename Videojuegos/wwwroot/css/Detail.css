@@ -15,3 +15,12 @@ h1{
 .button-container button {
     display: inline-block;
 }
+
+#description {
+    text-align:center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin:auto;
+}
